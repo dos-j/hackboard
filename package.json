@@ -1,0 +1,28 @@
+{
+  "name": "hackboard",
+  "version": "1.0.0",
+  "description": "A highly configurable, hackable dashboard for development teams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dos-j/hackboard.git"
+  },
+  "author": "dos-j",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dos-j/hackboard/issues"
+  },
+  "homepage": "https://github.com/dos-j/hackboard#readme",
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "serenitydi": "^1.0.8"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
