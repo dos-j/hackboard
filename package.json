@@ -4,7 +4,13 @@
   "description": "A highly configurable, hackable dashboard for development teams",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server/index.js",
+    "compile": "babel -d lib/ src/client/",
+    "prepublish": "npm run compile",
+    "test": "npm run testServer; npm run testClient",
+    "testClient": "mocha --require babel-core/register test/client/",
+    "testServer": "mocha --require babel-core/register test/server/",
+    "build": "./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -17,6 +23,7 @@
   },
   "homepage": "https://github.com/dos-j/hackboard#readme",
   "dependencies": {
+    "express": "^4.13.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "serenitydi": "^1.0.8"
@@ -28,6 +35,8 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "eslint": "^2.5.3",
+    "mocha": "^2.4.5",
+    "webpack": "^1.12.14"
   }
 }
